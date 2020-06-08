@@ -5,6 +5,6 @@ export default ( state = {}, { type, payload } ) => {
     case 'CLEAR_USER':
       return {}
     default:
-      return state;
+      return state
   }
 }

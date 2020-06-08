@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Pages from './Pages'
 
-const Routesn = () => {
+const Routes = () => {
   return (
     <Switch>
       <Route path='/signup' component={ Pages.Signup }/>

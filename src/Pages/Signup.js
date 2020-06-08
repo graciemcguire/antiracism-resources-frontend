@@ -26,7 +26,7 @@ const SignUp = props => {
   const { email, password } = signUpForm
 
   return (
-    <form>
+    <form onSubmit={ handleSubmit }>
 
       <h1>Signup</h1>
 

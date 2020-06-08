@@ -4,7 +4,7 @@ const BASE_URL = 'http://localhost:3000'
 const USERS_URL = BASE_URL + '/users'
 const PERSIST_URL = BASE_URL + '/persist'
 const LOGIN_URL = BASE_URL + '/login'
-const SPECIFIC_USER_URL = id = > USERS_URL + '/' + id
+const SPECIFIC_USER_URL = id => USERS_URL + '/' + id
 
 
 //redux actions
@@ -22,7 +22,6 @@ const clearUserAction = () => ({
 //fetchies
 
 const newUserToDB = userObj => dispatch => {
-
   const config = {
     method: 'POST',
     headers: {
@@ -33,10 +32,11 @@ const newUserToDB = userObj => dispatch => {
 
   fetch(USERS_URL, config)
   .then(r => r.json())
-  .then(data => {
-    dispatch(setUserAction(data.user))
-    localStorage.setItem('token', data.token)
-  })
+  // .then(data => {
+  //   dispatch(setUserAction(data.user))
+  //   localStorage.setItem('token', data.token)
+  // })
+  .then(data => console.log(data))
 }
 
 const deleteUserFromDB = userId => dispatch => {
@@ -45,7 +45,7 @@ const deleteUserFromDB = userId => dispatch => {
     method: 'DELETE'
   };
 
-  fetch(SPECIFIC_USER_URL(id), config)
+  fetch(SPECIFIC_USER_URL(userId), config)
   .then(r => {
     dispatch(clearUserAction())
     localStorage.clear()
@@ -64,10 +64,11 @@ const loginUserToDB = userCredentials => dispatch => {
 
   fetch(LOGIN_URL, config)
   .then(r => r.json())
-  .then(data => {
-    dispatch(setUserAction(data.user))
-    localStorage.setItem('token', data.token)
-  });
+  // .then(data => {
+  //   dispatch(setUserAction(data.user))
+  //   localStorage.setItem('token', data.token)
+  // });
+  .then(data => console.log(data))
 
 }
 
