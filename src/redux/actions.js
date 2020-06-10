@@ -22,7 +22,7 @@ const clearUserAction = () => ({
 //fetchies
 
 const newUserToDB = userObj => dispatch => {
-  debugger
+  // debugger
   const config = {
     method: 'POST',
     headers: {
@@ -34,8 +34,9 @@ const newUserToDB = userObj => dispatch => {
   fetch(USERS_URL, config)
   .then(r => r.json())
   .then(data => {
-    dispatch(setUserAction(data))
-    // localStorage.setItem('token', data.token)
+    setUserAction(data.token)
+    localStorage.setItem('token', data.token)
+    console.log(data)
   })
 }
 
