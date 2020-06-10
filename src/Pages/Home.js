@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 const Home = () => {
 
-  const email = useSelector(state => state.user)
+  const email = useSelector(state => state.email)
 
   const text = email ? (
     <h1>logged in as { email }</h1>

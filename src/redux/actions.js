@@ -34,7 +34,7 @@ const newUserToDB = userObj => dispatch => {
   fetch(USERS_URL, config)
   .then(r => r.json())
   .then(data => {
-    setUserAction(data.token)
+    setUserAction(data.user)
     localStorage.setItem('token', data.token)
     console.log(data)
   })
@@ -54,7 +54,7 @@ const deleteUserFromDB = userId => dispatch => {
 }
 
 const loginUserToDB = userCredentials => dispatch => {
-
+  // debugger
   const config = {
     method: 'POST',
     headers: {
@@ -65,11 +65,14 @@ const loginUserToDB = userCredentials => dispatch => {
 
   fetch(LOGIN_URL, config)
   .then(r => r.json())
+  .then(data => {
+    dispatch(setUserAction(data.user))
+    localStorage.setItem('token', data.token)
+    console.log(data);
+  });
   // .then(data => {
-  //   dispatch(setUserAction(data.user))
-  //   localStorage.setItem('token', data.token)
-  // });
-  .then(data => console.log(data))
+  //   console.log(data)
+  // })
 
 }
 
