@@ -20,6 +20,7 @@ const SignUp = props => {
     e.preventDefault()
     const { history } = props
     dispatch(userActions.newUserToDB(signUpForm))
+    // debugger
     history.push('/')
   }
 

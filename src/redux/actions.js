@@ -22,6 +22,7 @@ const clearUserAction = () => ({
 //fetchies
 
 const newUserToDB = userObj => dispatch => {
+  debugger
   const config = {
     method: 'POST',
     headers: {
@@ -32,11 +33,10 @@ const newUserToDB = userObj => dispatch => {
 
   fetch(USERS_URL, config)
   .then(r => r.json())
-  // .then(data => {
-  //   dispatch(setUserAction(data.user))
-  //   localStorage.setItem('token', data.token)
-  // })
-  .then(data => console.log(data))
+  .then(data => {
+    dispatch(setUserAction(data))
+    // localStorage.setItem('token', data.token)
+  })
 }
 
 const deleteUserFromDB = userId => dispatch => {
