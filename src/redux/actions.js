@@ -34,7 +34,7 @@ const newUserToDB = userObj => dispatch => {
   fetch(USERS_URL, config)
   .then(r => r.json())
   .then(data => {
-    setUserAction(data.user)
+    dispatch(setUserAction(data.user))
     localStorage.setItem('token', data.token)
     console.log(data)
   })
