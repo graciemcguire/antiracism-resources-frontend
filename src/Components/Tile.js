@@ -4,7 +4,7 @@ const Tile = (props) => {
   console.log(props);
 
   return(
-    <h1> Hello </h1>
+    <h1> {props.resource.title} </h1>
   )
 }
 

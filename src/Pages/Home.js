@@ -25,7 +25,7 @@ const Home = () => {
     <h1>nobody is logged in</h1>
   )
 
-  const allResources = resources.map( resource => <Tile resource={resource} />)
+  const allResources = resources.map( resource => <Tile key={resource.id} resource={resource} />)
 
 
 
