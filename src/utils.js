@@ -1,7 +1,11 @@
 import axios from 'axios';
 
-const BASE_URL = ''
+const BASE_URL = 'http://localhost:3000'
 
 const getAllResources = async () => {
-  const response =
+  const response = await axios(`${BASE_URL}/resources`);
+  console.log(response);
+  return response.data;
 }
+
+export { getAllResources }
