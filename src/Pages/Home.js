@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { getAllResources } from '../utils';
-import Tile from '../Components/Tile';
+import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
+import { getAllResources } from '../utils'
+import Tile from '../Components/Tile'
 
 const Home = () => {
+  const [ resources, setResource ] = useState([])
 
   useEffect(() => {
     gatherResources()
   }, [])
 
-  const [ resources, setResource ] = useState([])
 
   const email = useSelector(state => state.email)
 
