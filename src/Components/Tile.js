@@ -10,6 +10,7 @@ const Tile = ({resource}) => {
               url={`${url}`}
               width={`70vw`}
               height={'100%'}
+              controls={true}
             />)
     } else {
       return (<a href={url}> Read More </a>)
@@ -18,9 +19,8 @@ const Tile = ({resource}) => {
 
   return(
     <section className='tile'>
-      <h2>{resource.title}</h2>
-      <p>{resource.description}</p>
-      <hr />
+      <h2 className='resource-title'>{resource.title}</h2>
+      <p className='resource-description'>{resource.description}</p>
       {mediaRendering(resource.url)}
     </section>
   )

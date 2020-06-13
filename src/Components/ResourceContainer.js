@@ -19,7 +19,7 @@ const ResourceContainer = (props) => {
         setCurrentResource(props.resources)
       } else if (props.location.pathname === `/${neededResource}s`) {
           const data = props.resources.filter( resource => resource.kind === neededResource)
-          // console.log(data);
+
           setCurrentResource(data)
       }
   }
@@ -31,9 +31,9 @@ const ResourceContainer = (props) => {
   })
 
   return(
-    <>
-      {allResources}
-    </>
+    <section className='resource-container'>
+      { allResources }
+    </section>
   )
 }
 
