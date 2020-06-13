@@ -16,9 +16,9 @@ const Home = () => {
   const email = useSelector(state => state.email)
 
   const gatherResources = async () => {
-    const data = await getAllResources();
-    setResource(data)
-    return data;
+      const data = await getAllResources();
+      setResource(data)
+      return data;
   }
 
 

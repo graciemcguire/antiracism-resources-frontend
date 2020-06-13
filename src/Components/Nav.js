@@ -10,8 +10,6 @@ const Nav = (props) => {
 
   const dispatch = useDispatch()
 
-
-
   const handleLogout = () => {
     dispatch(userActions.logoutUser())
   }
@@ -30,6 +28,7 @@ const Nav = (props) => {
           borderRadius={3}
           animationDuration={0.5}
         />
+        <h1> Anti-Racist Resources </h1>
       </section>
       {
         isOpen
@@ -37,6 +36,7 @@ const Nav = (props) => {
         <section className='menu-list'>
           <Link to='/books'> Books </Link>
           <Link to='/articles'> Articles </Link>
+          <Link to='/videos'> Videos </Link>
           {
             props.isUserLoggedIn
             ?

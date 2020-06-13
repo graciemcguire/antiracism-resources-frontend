@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Tile from './Tile'
-import {withRouter} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 
 const ResourceContainer = (props) => {
@@ -19,12 +19,15 @@ const ResourceContainer = (props) => {
         setCurrentResource(props.resources)
       } else if (props.location.pathname === `/${neededResource}s`) {
           const data = props.resources.filter( resource => resource.kind === neededResource)
+          // console.log(data);
           setCurrentResource(data)
       }
   }
 
   const allResources = currentResources.map( resource => {
-      return <Tile key={resource.id} resource={resource} />
+      return <Tile
+              key={resource.id}
+              resource={resource} />
   })
 
   return(
