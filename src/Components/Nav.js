@@ -28,7 +28,7 @@ const Nav = (props) => {
           borderRadius={3}
           animationDuration={0.5}
         />
-        <h1> Anti-Racist Resources </h1>
+        <h1 id='main-title'> Anti-Racist Resources </h1>
       </section>
       {
         isOpen

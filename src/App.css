@@ -1,17 +1,37 @@
 *, ** {
   box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(207,222,187);
+  margin: 0;
+}
+nav {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  color: rgb(244,179,147);
 }
 
 .hamburger-menu {
-  margin-top: 1rem;
+  padding-left: 1rem;
+  /* width: 100%; */
+  height: 5rem;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  background-color: blue;
+  background-color: rgb(87,77,106);
+}
+
+#main-title {
+  padding-left: 2rem;
+  text-transform: uppercase;
+  font-size: 100%;
 }
 
 .menu-list {
-  background-color: red;
+  background-color: white;
   display: flex;
   flex-direction: column;
   display: absolute;
