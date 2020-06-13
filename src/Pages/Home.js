@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { getAllResources } from '../utils'
-import Tile from '../Components/Tile'
+import Nav from '../Components/Nav'
+import ResourceContainer from '../Components/ResourceContainer'
 
 const Home = () => {
   const [ resources, setResource ] = useState([])
+  const [ isUserLoggedIn, userStatus ] = useState(false)
 
   useEffect(() => {
     gatherResources()
@@ -19,19 +21,22 @@ const Home = () => {
     return data;
   }
 
-  const text = email ? (
-    <h1>logged in as { email }</h1>
-  ) : (
-    <h1>nobody is logged in</h1>
-  )
 
-  const allResources = resources.map( resource => <Tile key={resource.id} resource={resource} />)
+  const checkForUser = () => {
+    if(email){
+      userStatus(true)
+    } else {
+      userStatus(false)
+    }
+  }
+
 
 
 
   return (
     <div>
-      { allResources }
+      <Nav isUserLoggedIn={isUserLoggedIn}/>
+      <ResourceContainer resources={resources}/>
     </div>
   )
 }
