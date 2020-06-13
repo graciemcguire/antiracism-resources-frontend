@@ -19,7 +19,7 @@ const ResourceContainer = (props) => {
         setCurrentResource(props.resources)
       } else if (props.location.pathname === `/${neededResource}s`) {
           const data = props.resources.filter( resource => resource.kind === neededResource)
-
+          
           setCurrentResource(data)
       }
   }
