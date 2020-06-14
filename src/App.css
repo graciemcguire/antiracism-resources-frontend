@@ -1,6 +1,11 @@
 *, ** {
   box-sizing: border-box;
   margin: 0;
+  min-width: 320px;
+}
+
+html {
+  min-width: 320px;
 }
 
 body {
@@ -22,6 +27,7 @@ h1 {
   display: flex;
   align-items: center;
   background-color: rgb(87,77,106);
+  min-width: 320px;
 }
 
 .main-title {
@@ -31,6 +37,7 @@ h1 {
   letter-spacing: 1.3px;
   width: 100%;
   text-align: center;
+  min-width: 284px;
 }
 
 .menu-list {
@@ -59,6 +66,7 @@ h1 {
   /* justify-content: space-around; */
   align-items: center;
   margin-top: 3rem;
+  /* min-width: 320px; */
 }
 
 .tile {
@@ -72,6 +80,8 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: 240px;
+  min-height: 190px;
 }
 
 .resource-title {
@@ -82,4 +92,8 @@ h1 {
 
 .resource-description {
   color: white;
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
 }
