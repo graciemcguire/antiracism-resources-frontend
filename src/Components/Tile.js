@@ -3,7 +3,7 @@ import ReactPlayer from "react-player"
 import YouTubePlayer from 'react-player/lib/players/YouTube';
 
 const Tile = ({resource}) => {
-  console.log(resource);
+
   const mediaRendering = (url) => {
     if(url.includes('youtu.be')){
       return (<ReactPlayer
@@ -21,7 +21,7 @@ const Tile = ({resource}) => {
     <section className='tile'>
       <h2 className='resource-title'>{resource.title}</h2>
       <p className='resource-description'>{resource.description}</p>
-      {mediaRendering(resource.url)}
+      { mediaRendering(resource.url) }
     </section>
   )
 }
