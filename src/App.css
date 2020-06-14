@@ -15,8 +15,8 @@ h1 {
   color: rgb(244,179,147);
 }
 
-.hamburger-menu {
-  padding-left: 1rem;
+.hamburger-menu-container {
+  padding-left: 2rem;
   /* width: 100%; */
   height: 5rem;
   display: flex;
@@ -24,11 +24,13 @@ h1 {
   background-color: rgb(87,77,106);
 }
 
-#main-title {
-  padding-left: 2rem;
+.main-title {
+  /* padding-left: 1rem; */
   text-transform: uppercase;
   font-size: 100%;
   letter-spacing: 1.3px;
+  width: 100%;
+  text-align: center;
 }
 
 .menu-list {
@@ -61,7 +63,8 @@ h1 {
 
 .tile {
   background-color: rgb(87,77,106);
-  width: 60vw;
+  width: 55vw;
+  height: 50vw;
   padding: 2rem;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;

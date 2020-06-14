@@ -16,7 +16,7 @@ const Nav = (props) => {
 
   return(
     <nav>
-      <section className='hamburger-menu'>
+      <section className='hamburger-menu-container'>
         <HamburgerMenu
           isOpen={isOpen}
           menuClicked={() => toggleMenu(!isOpen)}
@@ -24,11 +24,13 @@ const Nav = (props) => {
           height={30}
           strokeWidth={4}
           rotate={0}
-          color='black'
+          color='white'
           borderRadius={3}
           animationDuration={0.5}
         />
-        <h1 id='main-title'> Anti-Racist Resources </h1>
+        <section className='main-title'>
+          <h1> Anti-Racist Resources </h1>
+        </section>
       </section>
       {
         isOpen

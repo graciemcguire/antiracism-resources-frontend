@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactPlayer from "react-player"
-import YouTubePlayer from 'react-player/lib/players/YouTube';
 
 const Tile = ({resource}) => {
 
