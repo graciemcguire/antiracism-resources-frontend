@@ -40,8 +40,11 @@ h1 {
   min-width: 284px;
   font-size: 4vw;
 }
+.menu-list-desktop {
+  display: none;
+}
 
-.menu-list {
+.menu-list-mobile {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -53,7 +56,7 @@ h1 {
   box-shadow: 5px 4px 9px rgb(87,77,106);
 }
 
-.menu-list a {
+.menu-list-mobile a {
   padding: .8rem 2.2rem;
   border-bottom: 1px solid rgba(87,77,106, .5);
   text-decoration: none;
@@ -131,4 +134,18 @@ a {
     width: 35%;
   }
 
+  nav {
+    background-color: rgb(87,77,106);
+  }
+
+  .hamburger-menu-container > div {
+    display: none;
+  }
+
+  .menu-list-desktop {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
 }

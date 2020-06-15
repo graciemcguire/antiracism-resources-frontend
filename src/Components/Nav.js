@@ -32,10 +32,7 @@ const Nav = (props) => {
           <h1> Anti-Racist Resources </h1>
         </section>
       </section>
-      {
-        isOpen
-        ?
-        <section className='menu-list'>
+        <section className={isOpen ? 'menu-list-mobile' : 'menu-list-desktop'}>
           <Link to='/books'> Books </Link>
           <Link to='/articles'> Articles </Link>
           <Link to='/videos'> Videos </Link>
@@ -50,9 +47,7 @@ const Nav = (props) => {
             </>
           }
         </section>
-        :
-        null
-      }
+
     </nav>
   )
 }
