@@ -1,12 +1,12 @@
 *, ** {
   box-sizing: border-box;
   margin: 0;
-  min-width: 320px;
+  /* min-width: 320px; */
 }
 
-html {
+/* html {
   min-width: 320px;
-}
+} */
 
 body {
   background-color: rgb(207,222,187);
@@ -95,5 +95,8 @@ h1 {
 }
 
 /* Media query for tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px){
+  a {
+    color: white;
+  }
 }
