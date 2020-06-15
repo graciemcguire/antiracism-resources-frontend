@@ -7,8 +7,8 @@ const Tile = ({resource}) => {
     if(url.includes('youtu.be')){
       return (<ReactPlayer
               url={`${url}`}
-              width={`70vw`}
-              height={'100%'}
+              width={`80%`}
+              height={'50%'}
               controls={true}
             />)
     } else {

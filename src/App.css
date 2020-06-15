@@ -38,6 +38,7 @@ h1 {
   width: 100%;
   text-align: center;
   min-width: 284px;
+  font-size: 4vw;
 }
 
 .menu-list {
@@ -63,7 +64,7 @@ h1 {
   /* text-align: center;  */
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
+  justify-content: center;
   align-items: center;
   margin-top: 3rem;
   /* min-width: 320px; */
@@ -71,8 +72,8 @@ h1 {
 
 .tile {
   background-color: rgb(87,77,106);
-  width: 55vw;
-  height: 50vw;
+  width: 50%;
+  height: 50%;
   padding: 2rem;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
@@ -85,7 +86,7 @@ h1 {
 }
 
 .resource-title {
-  font-size: max(18px, 1.5vw);
+  font-size: max(20px, 3.5vw);
   color: rgb(254,221,197);
   letter-spacing: 2px;
 }
@@ -94,9 +95,40 @@ h1 {
   color: white;
 }
 
+a {
+  color: white;
+}
+
 /* Media query for tablets */
-@media only screen and (min-width: 768px){
-  a {
-    color: white;
+@media only screen and (min-width: 603px){
+
+
+  .main-title {
+    font-size: 3vh;
   }
+
+  .resource-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .resource-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin: 30px;
+  }
+
+  .tile {
+    margin: 1vw;
+  }
+}
+
+
+@media only screen and (min-width: 1024px){
+  .tile {
+    margin: 2rem;
+    width: 35%;
+  }
+
 }
