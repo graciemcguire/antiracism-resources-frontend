@@ -40,6 +40,7 @@ h1 {
   min-width: 284px;
   font-size: 4vw;
 }
+
 .menu-list-desktop {
   display: none;
 }
@@ -127,7 +128,7 @@ a {
   }
 }
 
-
+/* Media query for desktops */
 @media only screen and (min-width: 1024px){
   .tile {
     margin: 2rem;
@@ -136,6 +137,11 @@ a {
 
   nav {
     background-color: rgb(87,77,106);
+    text-transform: uppercase;
+  }
+
+  .hamburger-menu-container {
+    justify-content: center;
   }
 
   .hamburger-menu-container > div {
@@ -146,6 +152,11 @@ a {
     display: flex;
     justify-content: space-around;
     padding-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .menu-list-desktop a {
+    text-decoration: none;
   }
 }
