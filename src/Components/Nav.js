@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import userActions from '../redux/actions'
 import HamburgerMenu from 'react-hamburger-menu'
-
+import logo from '../arr_logo_v1.png'
 
 const Nav = (props) => {
   const [ isOpen, toggleMenu ] = useState(false)
@@ -16,6 +16,9 @@ const Nav = (props) => {
 
   return(
     <nav>
+        <section className='main-title'>x
+          <img src= { logo } alt= 'anti-racist resources logo' />
+        </section>
       <section className='hamburger-menu-container'>
         <HamburgerMenu
           isOpen={isOpen}
@@ -28,9 +31,7 @@ const Nav = (props) => {
           borderRadius={3}
           animationDuration={0.5}
         />
-        <section className='main-title'>
-          <h1> Anti-Racist Resources </h1>
-        </section>
+      
       </section>
         <section className={isOpen ? 'menu-list-mobile' : 'menu-list-desktop'}>
           <Link to='/books'> Books </Link>

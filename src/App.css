@@ -14,6 +14,7 @@ body {
 }
 nav {
   font-family: 'Roboto', sans-serif;
+  /* height: 25vh; */
 }
 
 h1 {
@@ -108,7 +109,7 @@ a {
 
 
   .main-title {
-    font-size: 3vh;
+    height: 1vh;
   }
 
   .resource-title {
@@ -138,6 +139,12 @@ a {
   nav {
     background-color: rgb(87,77,106);
     text-transform: uppercase;
+    height: 20vh;
+  }
+
+  .logo {
+    height: 5vh;
+    /* position: fixed; */
   }
 
   .hamburger-menu-container {
