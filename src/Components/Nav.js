@@ -16,9 +16,6 @@ const Nav = (props) => {
 
   return(
     <nav>
-        <section className='main-title'>x
-          <img src= { logo } alt= 'anti-racist resources logo' />
-        </section>
       <section className='hamburger-menu-container'>
         <HamburgerMenu
           isOpen={isOpen}
@@ -31,7 +28,10 @@ const Nav = (props) => {
           borderRadius={3}
           animationDuration={0.5}
         />
-      
+      <section className='main-title'>
+        <img src= { logo } alt='anti-racist resources logo' className='logo'/>
+        {/* <img src= { logo } alt= 'anti-racist resources logo' className ='logo' /> */}
+      </section>
       </section>
         <section className={isOpen ? 'menu-list-mobile' : 'menu-list-desktop'}>
           <Link to='/books'> Books </Link>
