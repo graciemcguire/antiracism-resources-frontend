@@ -5,8 +5,8 @@ import Pages from './Pages'
 const Routes = () => {
   return (
     <Switch>
-      <Route path='/signup' component={ Pages.Signup }/>
-      <Route path='/login' component={ Pages.Login }/>
+      {/* <Route path='/signup' component={ Pages.Signup }/>
+      <Route path='/login' component={ Pages.Login }/> */}
       <Route path='*' component={ Pages.Home }/>
     </Switch>
   )

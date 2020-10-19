@@ -5,6 +5,7 @@ import Nav from '../Components/Nav'
 import ResourceContainer from '../Components/ResourceContainer'
 
 const Home = () => {
+
   const [ resources, setResource ] = useState([])
   const [ isUserLoggedIn, userStatus ] = useState(false)
 
@@ -35,7 +36,8 @@ const Home = () => {
 
   return (
     <div>
-      <Nav isUserLoggedIn={isUserLoggedIn}/>
+      <Nav />
+      {/* <Nav isUserLoggedIn={isUserLoggedIn}/> */}
       <ResourceContainer resources={resources}/>
     </div>
   )

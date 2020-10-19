@@ -15,7 +15,7 @@ const Tile = ({resource}) => {
       return (<a href={url}> Read More </a>)
     }
   }
-
+  
   return(
     <section className='tile'>
       <h2 className='resource-title'>{resource.title}</h2>
