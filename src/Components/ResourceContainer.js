@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Tile from './Tile'
 import { withRouter } from 'react-router-dom'
+import About from './About'
 
 //hello
 const ResourceContainer = (props) => {
@@ -17,10 +18,14 @@ const ResourceContainer = (props) => {
   const renderCurrentResources = () => {
       if(props.location.pathname === '/'){
         setCurrentResource(props.resources)
-      } else if (props.location.pathname === `/${neededResource}s`) {
-          const data = props.resources.filter( resource => resource.kind === neededResource)
-          console.log(data)
-          setCurrentResource(data)
+      } else if (props.location.pathname != '/parents' && props.location.pathname === `/${neededResource}s`) {
+        const data = props.resources.filter( resource => resource.kind === neededResource)
+        setCurrentResource(data)
+      } else if (props.location.pathname === '/parents'){
+        const data = props.resources.filter(data => !!data.for_kids)
+        setCurrentResource(data)
+      } else if (props.location.pathname === '/about'){
+        renderAbout()
       }
   }
 
@@ -30,6 +35,10 @@ const ResourceContainer = (props) => {
               resource={resource} 
             />
   })
+
+  const renderAbout = () =>  {
+    return <About />
+  }
 
   return(
     <section className='resource-container'>
