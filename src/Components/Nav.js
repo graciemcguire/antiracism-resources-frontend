@@ -43,7 +43,6 @@ const Nav = (props) => {
           <Link to='/movies'> Film & TV </Link>
           <Link to='/organizations'> Organizations </Link>
           <Link to='/parents'> Raising Anti-Racist Kids </Link>
-          <Link to='/about'> About </Link>
           {/* {
             props.isUserLoggedIn
             ?
