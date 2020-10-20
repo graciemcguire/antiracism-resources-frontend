@@ -6,6 +6,7 @@ import HamburgerMenu from 'react-hamburger-menu'
 
 
 const Nav = (props) => {
+
   const [ isOpen, toggleMenu ] = useState(false)
 
   const dispatch = useDispatch()
@@ -14,7 +15,9 @@ const Nav = (props) => {
     dispatch(userActions.logoutUser())
   }
 
+
   return(
+    
     <nav>
       <section className='hamburger-menu-container'>
         <HamburgerMenu
@@ -36,7 +39,11 @@ const Nav = (props) => {
           <Link to='/books'> Books </Link>
           <Link to='/articles'> Articles </Link>
           <Link to='/videos'> Videos </Link>
-          {
+          <Link to='/podcasts'> Podcasts </Link>
+          <Link to='/movies'> Film & TV </Link>
+          <Link to='/organizations'> Organizations </Link>
+          <Link to='/parents'> Raising Anti-Racist Kids </Link>
+          {/* {
             props.isUserLoggedIn
             ?
             <Link to='/' onClick={ handleLogout }> log out </Link>
@@ -45,7 +52,7 @@ const Nav = (props) => {
               <Link to='/login'> Login </Link>
               <Link to='/signup'> Sign Up </Link>
             </>
-          }
+          } */}
         </section>
 
     </nav>

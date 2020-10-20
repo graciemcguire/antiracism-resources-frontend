@@ -12,10 +12,10 @@ const Tile = ({resource}) => {
               controls={true}
             />)
     } else {
-      return (<a href={url}> Read More </a>)
+      return (<a href={url} target="_blank"> Read More </a>)
     }
   }
-
+  
   return(
     <section className='tile'>
       <h2 className='resource-title'>{resource.title}</h2>

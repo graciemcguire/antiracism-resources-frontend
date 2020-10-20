@@ -3,8 +3,10 @@ import { useSelector } from 'react-redux'
 import { getAllResources } from '../utils'
 import Nav from '../Components/Nav'
 import ResourceContainer from '../Components/ResourceContainer'
+import About from '../Components/About'
 
 const Home = () => {
+
   const [ resources, setResource ] = useState([])
   const [ isUserLoggedIn, userStatus ] = useState(false)
 
@@ -30,12 +32,11 @@ const Home = () => {
     }
   }
 
-
-
-
   return (
     <div>
-      <Nav isUserLoggedIn={isUserLoggedIn}/>
+      <Nav />
+      {/* <Nav isUserLoggedIn={isUserLoggedIn}/> */}
+      <About />
       <ResourceContainer resources={resources}/>
     </div>
   )

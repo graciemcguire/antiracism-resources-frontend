@@ -6,8 +6,7 @@ import { withRouter } from 'react-router-dom'
 const ResourceContainer = (props) => {
   const [ currentResources, setCurrentResource ] = useState([])
 
-  let neededResource = props.location.pathname.replace(/[/s"]/g, "");
-
+  let neededResource = props.location.pathname.slice(1, -1);
 
   useEffect(() => {
     renderCurrentResources()
@@ -17,17 +16,20 @@ const ResourceContainer = (props) => {
   const renderCurrentResources = () => {
       if(props.location.pathname === '/'){
         setCurrentResource(props.resources)
-      } else if (props.location.pathname === `/${neededResource}s`) {
-          const data = props.resources.filter( resource => resource.kind === neededResource)
-
-          setCurrentResource(data)
+      } else if (props.location.pathname != '/parents' && props.location.pathname === `/${neededResource}s`) {
+        const data = props.resources.filter( resource => resource.kind === neededResource)
+        setCurrentResource(data)
+      } else if (props.location.pathname === '/parents'){
+        const data = props.resources.filter(data => !!data.for_kids)
+        setCurrentResource(data)
       }
   }
 
   const allResources = currentResources.map( resource => {
       return <Tile
               key={resource.id}
-              resource={resource} />
+              resource={resource} 
+            />
   })
 
   return(
