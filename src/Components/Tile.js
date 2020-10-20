@@ -12,7 +12,7 @@ const Tile = ({resource}) => {
               controls={true}
             />)
     } else {
-      return (<a href={url}> Read More </a>)
+      return (<a href={url} target="_blank"> Read More </a>)
     }
   }
   
