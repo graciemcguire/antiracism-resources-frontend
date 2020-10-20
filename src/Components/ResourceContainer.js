@@ -6,7 +6,6 @@ import { withRouter } from 'react-router-dom'
 const ResourceContainer = (props) => {
   const [ currentResources, setCurrentResource ] = useState([])
 
-  // let neededResource = props.location.pathname.replace(/[/s"]/g, "");
   let neededResource = props.location.pathname.slice(1, -1);
 
   useEffect(() => {
