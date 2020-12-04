@@ -198,10 +198,14 @@ a {
     font-weight: bold;
     margin: 0 3em;
     background-color: rgb(0, 0, 0);
-
   }
 
   .menu-list-desktop a {
     text-decoration: none;
+    transition: color .5s;
+  }
+
+  .menu-list-desktop a:hover {
+    color: #AAEFDF;
   }
 }
