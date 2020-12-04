@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import userActions from '../redux/actions'
 import HamburgerMenu from 'react-hamburger-menu'
-
+import logo from '../arr_logo_v4.png'
 
 const Nav = (props) => {
 
@@ -32,7 +32,7 @@ const Nav = (props) => {
           animationDuration={0.5}
         />
       <section className='main-title'>
-        <h1>Anti-Racism Resources</h1>
+        <img src= { logo } alt= 'anti-racism resources' className='logo' />
       </section>
       </section>
         <section className={isOpen ? 'menu-list-mobile' : 'menu-list-desktop'}>
