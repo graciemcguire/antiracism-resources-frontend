@@ -29,8 +29,8 @@ h1 {
 }
 
 .logo {
-    height: 8em;
-    padding: 1em;
+    height: 7em;
+    padding: 2em;
     margin: auto;
 }
 
@@ -112,10 +112,6 @@ a {
 @media only screen and (min-width: 603px){
 
 
-  .main-title {
-    font-size: 3vh;
-  }
-
   .resource-title {
     font-size: 1.5rem;
     letter-spacing: 1px;
@@ -133,13 +129,13 @@ a {
   }
 
   .logo {
-    height: 4.5em;
-    padding: 2em 1em 2em;
-    margin-left: 3.5em;
+    height: 6em;
+    padding: 2em;
+    margin: auto;
   }
 
   .hamburger-menu-container {
-    height: 8em;
+    height: 10em;
   }
 }
 
