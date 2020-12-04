@@ -10,13 +10,14 @@ body {
   /* width: 100vw; */
   font-family: 'Roboto', sans-serif;
 }
+
 nav {
   font-family: 'Roboto', sans-serif;
 }
 
-h1 {
+/* h1 {
   color: rgb(244,179,147);
-}
+} */
 
 .hamburger-menu-container {
   padding-left: 2rem;
@@ -48,14 +49,14 @@ h1 {
 }
 
 .about {
-  height: 10em;
-  background-color: white;
+  background-color: #fff;
+  color: rgb(87,77,106);
   width: 100vw;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 1.5em; 
+  padding: 1em 18em; 
 }
 
 
