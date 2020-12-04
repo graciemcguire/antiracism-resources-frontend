@@ -32,7 +32,7 @@ const Nav = (props) => {
           animationDuration={0.5}
         />
       <section className='main-title'>
-        <img src= { logo } alt= 'anti-racism resources' className='logo' />
+        <Link to='/'><img src= { logo } alt= 'anti-racism resources' className='logo' /></Link>
       </section>
       </section>
         <section className={isOpen ? 'menu-list-mobile' : 'menu-list-desktop'}>
