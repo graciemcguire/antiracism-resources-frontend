@@ -135,7 +135,18 @@ a {
   }
 
   .hamburger-menu-container {
-    height: 10em;
+    height: 12em;
+  }
+}
+
+/* Media query for small desktops / big tablets */
+@media only screen and (min-width: 750px){
+  .hamburger-menu-container {
+    height: 14em;
+  }
+
+  .logo {
+    height: 4em;
   }
 }
 
@@ -151,8 +162,15 @@ a {
     text-transform: uppercase;
   }
 
+  .logo {
+    height: 4em;
+    padding: 1em;
+    margin: auto;
+  }
+
   .hamburger-menu-container {
     justify-content: center;
+    height: 15em;
   }
 
   .hamburger-menu-container > div {
