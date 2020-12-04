@@ -37,7 +37,7 @@ const Home = () => {
       <Nav />
       {/* <Nav isUserLoggedIn={isUserLoggedIn}/> */}
       <About />
-      <ResourceContainer resources={resources}/>
+      <ResourceContainer resources={ resources }/>
     </div>
   )
 }
