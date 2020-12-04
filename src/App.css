@@ -49,15 +49,17 @@ nav {
 }
 
 .about {
-  background-color: #fff;
-  color: rgb(87,77,106);
+  background-color: rgb(244,179,147);
+  color: black;
   width: 100vw;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: flex-start;
-  padding: 1em 18em; 
+  padding: 1em 3em; 
+  text-align: center;
 }
+
 
 
 .menu-list-desktop {
