@@ -9,15 +9,16 @@ body {
   margin: 0;
   /* width: 100vw; */
   font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 nav {
   font-family: 'Roboto', sans-serif;
 }
 
-/* h1 {
-  color: rgb(244,179,147);
-} */
+h1 {
+    font-family: 'Bebas Neue', cursive;
+}
 
 .hamburger-menu-container {
   padding-left: 2rem;
@@ -58,9 +59,8 @@ nav {
   justify-content: flex-start;
   padding: 1em 3em; 
   text-align: center;
+  
 }
-
-
 
 .menu-list-desktop {
   display: none;
@@ -96,7 +96,7 @@ nav {
 }
 
 .tile {
-  background-color: rgb(87,77,106);
+  background-color: #B5ABCB;
   width: 50%;
   height: 50%;
   padding: 2rem;
@@ -108,21 +108,38 @@ nav {
   justify-content: center;
   min-width: 240px;
   min-height: 190px;
+  text-align: center;
 }
 
 .resource-title {
   font-size: max(20px, 3.5vw);
-  color: rgb(254,221,197);
+  color: #000;
   letter-spacing: 2px;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .resource-description {
-  color: white;
+  color: black;
 }
 
 a {
   color: white;
+  text-decoration: none;
 }
+
+.tile-button {
+  background-color: white;
+  box-shadow: .3em .4em #3B3549;
+  height: 2em;
+
+}
+
+.tile-button a {
+  color: #3B3549;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
 
 /* Media query for tablets */
 @media only screen and (min-width: 603px){
@@ -198,10 +215,14 @@ a {
     font-weight: bold;
     margin: 0 3em;
     background-color: rgb(0, 0, 0);
-
   }
 
   .menu-list-desktop a {
     text-decoration: none;
+    transition: color .5s;
+  }
+
+  .menu-list-desktop a:hover {
+    color: #AAEFDF;
   }
 }
