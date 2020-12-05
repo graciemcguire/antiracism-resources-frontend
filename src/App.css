@@ -54,7 +54,7 @@ h1 {
 .about {
   background-color: rgb(244,179,147);
   color: black;
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -93,8 +93,9 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
-  /* min-width: 320px; */
+  /* margin-top: 3rem; */
+  background-color: #564D6A;
+  padding-top: 4em;
 }
 
 .tile {
@@ -159,8 +160,8 @@ a {
   .resource-container {
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100vh;
-    margin: 30px;
+    /* height: 100vh; */
+    /* margin: 30px; */
   }
 
   .tile {

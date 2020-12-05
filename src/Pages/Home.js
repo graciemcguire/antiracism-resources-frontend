@@ -33,12 +33,12 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <>
       <Nav />
       {/* <Nav isUserLoggedIn={isUserLoggedIn}/> */}
       <About />
       <ResourceContainer resources={ resources }/>
-    </div>
+    </>
   )
 }
 export default Home;
