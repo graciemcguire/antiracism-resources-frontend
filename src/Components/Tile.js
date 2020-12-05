@@ -12,13 +12,13 @@ const Tile = ({resource}) => {
               controls={true}
             />)
     } else {
-      return (<a href={url} target="_blank"> Read More </a>)
+      return (<button className='tile-button'><a href={url} target="_blank"> READ MORE </a></button>)
     }
   }
   
   return(
     <section className='tile'>
-      <h2 className='resource-title'>{resource.title}</h2>
+      <h1 className='resource-title'>{resource.title}</h1>
       <p className='resource-description'>{resource.description}</p>
       { mediaRendering(resource.url) }
     </section>
