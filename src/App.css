@@ -59,13 +59,12 @@ h1 {
   flex-flow: column wrap;
   align-items: center;
   justify-content: flex-start;
-  padding: 1em 3em; 
+  padding: 2em; 
   text-align: center;
-  
 }
 
 .about p {
-  padding: 1em 8em;
+  padding: 1em 3em;
 }
 
 .menu-list-desktop {
@@ -129,6 +128,7 @@ h1 {
 
 .resource-description {
   color: black;
+  padding: 1em;
 }
 
 a {
