@@ -17,7 +17,9 @@ nav {
 }
 
 h1 {
-    font-family: 'Bebas Neue', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .hamburger-menu-container {
@@ -115,7 +117,9 @@ h1 {
   font-size: max(20px, 3.5vw);
   color: #000;
   letter-spacing: 2px;
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .resource-description {
