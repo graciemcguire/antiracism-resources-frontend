@@ -64,6 +64,10 @@ h1 {
   
 }
 
+.about p {
+  padding: 1em 8em;
+}
+
 .menu-list-desktop {
   display: none;
 }
