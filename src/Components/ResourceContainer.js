@@ -5,7 +5,9 @@ import { withRouter } from 'react-router-dom'
 //hello
 const ResourceContainer = (props) => {
   const [ currentResources, setCurrentResource ] = useState([])
-
+// make a new state thats an object, keys are resource names, value is the array of said resource
+// slice array into 4 resources 
+//spread the arrays into one big array and return on page
   let neededResource = props.location.pathname.slice(1, -1);
 
   useEffect(() => {
@@ -34,7 +36,7 @@ const ResourceContainer = (props) => {
 
   return(
     <section className='resource-container'>
-      { allResources }
+      <div style={{ backgroundColor: 'red'}}>{ allResources }</div>
     </section>
   )
 }
