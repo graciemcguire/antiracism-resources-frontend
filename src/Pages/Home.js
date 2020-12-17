@@ -34,8 +34,8 @@ const Home = () => {
 
   return (
     <>
-      <Nav />
-      {/* <Nav isUserLoggedIn={isUserLoggedIn}/> */}
+      {/* <Nav /> */}
+      <Nav isUserLoggedIn={isUserLoggedIn}/>
       <About />
       <ResourceContainer resources={ resources }/>
     </>

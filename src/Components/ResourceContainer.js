@@ -36,7 +36,7 @@ const ResourceContainer = (props) => {
 
   return(
     <section className='resource-container'>
-      <div style={{ backgroundColor: 'red'}}>{ allResources }</div>
+     { allResources }
     </section>
   )
 }

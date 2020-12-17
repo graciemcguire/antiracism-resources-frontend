@@ -43,7 +43,7 @@ const Nav = (props) => {
           <Link to='/movies'> Film & TV </Link>
           <Link to='/organizations'> Organizations </Link>
           <Link to='/parents'> Raising Anti-Racist Kids </Link>
-          {/* {
+          {
             props.isUserLoggedIn
             ?
             <Link to='/' onClick={ handleLogout }> log out </Link>
@@ -52,7 +52,7 @@ const Nav = (props) => {
               <Link to='/login'> Login </Link>
               <Link to='/signup'> Sign Up </Link>
             </>
-          } */}
+          }
         </section>
 
     </nav>
