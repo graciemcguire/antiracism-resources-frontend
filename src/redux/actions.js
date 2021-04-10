@@ -68,7 +68,7 @@ const loginUserToDB = userCredentials => dispatch => {
   .then(data => {
     dispatch(setUserAction(data.user))
     localStorage.setItem('token', data.token)
-    console.log(data);
+    localStorage.setItem('id', data.user.id);
   });
 
 }

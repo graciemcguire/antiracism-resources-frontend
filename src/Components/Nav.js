@@ -34,16 +34,8 @@ const Nav = (props) => {
       <section className='main-title'>
         <Link to='/'><img src= { logo } alt= 'anti-racism resources' className='logo' /></Link>
       </section>
-      </section>
-        <section className={isOpen ? 'menu-list-mobile' : 'menu-list-desktop'}>
-          <Link to='/books'> Books </Link>
-          <Link to='/articles'> Articles </Link>
-          <Link to='/videos'> Videos </Link>
-          <Link to='/podcasts'> Podcasts </Link>
-          <Link to='/movies'> Film & TV </Link>
-          <Link to='/organizations'> Organizations </Link>
-          <Link to='/parents'> Raising Anti-Racist Kids </Link>
-          {
+      <section className='auth'>
+       {
             props.isUserLoggedIn
             ?
             <Link to='/' onClick={ handleLogout }> log out </Link>
@@ -53,6 +45,17 @@ const Nav = (props) => {
               <Link to='/signup'> Sign Up </Link>
             </>
           }
+      </section>
+      </section>
+        <section className={isOpen ? 'menu-list-mobile' : 'menu-list-desktop'}>
+          <Link to='/books'> Books </Link>
+          <Link to='/articles'> Articles </Link>
+          <Link to='/videos'> Videos </Link>
+          <Link to='/podcasts'> Podcasts </Link>
+          <Link to='/movies'> Film & TV </Link>
+          <Link to='/organizations'> Organizations </Link>
+          <Link to='/parents'> Raising Anti-Racist Kids </Link>
+         
         </section>
 
     </nav>
