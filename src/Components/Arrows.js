@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'
-
+import { BASE_URL } from '../utils'
 
 export default function Arrows({resource}) {
 
@@ -15,8 +15,6 @@ export default function Arrows({resource}) {
         getDownVotes()
     }, [])
 
-    const BASE_URL = 'http://localhost:3000'
-
     const clickHandler = (vote) => {
         postVote(vote, resource);
     }
@@ -27,6 +25,7 @@ export default function Arrows({resource}) {
             resource_id: resource,
             user_id: parseInt(localStorage.getItem('id'))
         })
+        resp.status === 201 && vote === 'downvote' ? setDownVotes(downVotes + 1) : setUpVotes(upVotes + 1)
         return resp;
     }
 
