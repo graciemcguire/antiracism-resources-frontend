@@ -1,10 +1,10 @@
 // constant API URLS
 
-const BASE_URL = 'http://localhost:3000'
-const USERS_URL = BASE_URL + '/users'
-const PERSIST_URL = BASE_URL + '/persist'
-const LOGIN_URL = BASE_URL + '/login'
-const SPECIFIC_USER_URL = id => USERS_URL + '/' + id
+const BASE_URL = 'http://localhost:3000';
+const USERS_URL = BASE_URL + '/users';
+const PERSIST_URL = BASE_URL + '/persist';
+const LOGIN_URL = BASE_URL + '/login';
+const SPECIFIC_USER_URL = id => USERS_URL + '/' + id;
 
 
 //redux actions
@@ -12,11 +12,11 @@ const SPECIFIC_USER_URL = id => USERS_URL + '/' + id
 const setUserAction = userObj => ({
   type: 'SET_USER',
   payload: userObj
-})
+});
 
 const clearUserAction = () => ({
   type: 'CLEAR_USER'
-})
+});
 
 
 //fetchies
@@ -32,13 +32,12 @@ const newUserToDB = userObj => dispatch => {
   };
 
   fetch(USERS_URL, config)
-  .then(r => r.json())
-  .then(data => {
-    dispatch(setUserAction(data.user))
-    localStorage.setItem('token', data.token)
-    console.log(data)
-  })
-}
+    .then(r => r.json())
+    .then(data => {
+      dispatch(setUserAction(data.user));
+      localStorage.setItem('token', data.token);
+    });
+};
 
 const deleteUserFromDB = userId => dispatch => {
 
@@ -47,11 +46,11 @@ const deleteUserFromDB = userId => dispatch => {
   };
 
   fetch(SPECIFIC_USER_URL(userId), config)
-  .then(r => {
-    dispatch(clearUserAction())
-    localStorage.clear()
-  })
-}
+    .then(r => {
+      dispatch(clearUserAction());
+      localStorage.clear();
+    });
+};
 
 const loginUserToDB = userCredentials => dispatch => {
   // debugger
@@ -64,14 +63,13 @@ const loginUserToDB = userCredentials => dispatch => {
   };
 
   fetch(LOGIN_URL, config)
-  .then(r => r.json())
-  .then(data => {
-    dispatch(setUserAction(data.user))
-    localStorage.setItem('token', data.token)
-    console.log(data);
-  });
+    .then(r => r.json())
+    .then(data => {
+      dispatch(setUserAction(data.user));
+      localStorage.setItem('token', data.token);
+    });
 
-}
+};
 
 const persistUser = () => dispatch => {
 
@@ -80,20 +78,20 @@ const persistUser = () => dispatch => {
     headers: {
       'Authorization': `bearer ` + localStorage.token
     }
-  }
+  };
 
   fetch(PERSIST_URL, config)
-  .then(r => r.json())
-  .then(userInstance => {
-    dispatch(setUserAction(userInstance))
-  })
+    .then(r => r.json())
+    .then(userInstance => {
+      dispatch(setUserAction(userInstance));
+    });
 
-}
+};
 
 const logoutUser = () => dispatch => {
-  dispatch(clearUserAction())
-  localStorage.clear()
-}
+  dispatch(clearUserAction());
+  localStorage.clear();
+};
 
 export default {
   newUserToDB,
@@ -101,4 +99,4 @@ export default {
   loginUserToDB,
   persistUser,
   logoutUser
-}
+};
