@@ -36,13 +36,13 @@ const Nav = (props) => {
         </section>
       </section>
       <section className={isOpen ? 'menu-list-mobile' : 'menu-list-desktop'}>
-        <Link onClick={() => toggleMenu(!isOpen)} to='/books'> Books </Link>
-        <Link onClick={() => toggleMenu(!isOpen)} to='/articles'> Articles </Link>
-        <Link onClick={() => toggleMenu(!isOpen)} to='/videos'> Videos </Link>
-        <Link onClick={() => toggleMenu(!isOpen)} to='/podcasts'> Podcasts </Link>
-        <Link onClick={() => toggleMenu(!isOpen)} to='/movies'> Film & TV </Link>
-        <Link onClick={() => toggleMenu(!isOpen)} to='/organizations'> Organizations </Link>
-        <Link onClick={() => toggleMenu(!isOpen)} to='/parents'> Raising Anti-Racist Kids </Link>
+        <Link onClick={() => toggleMenu(false)} to='/books'> Books </Link>
+        <Link onClick={() => toggleMenu(false)} to='/articles'> Articles </Link>
+        <Link onClick={() => toggleMenu(false)} to='/videos'> Videos </Link>
+        <Link onClick={() => toggleMenu(false)} to='/podcasts'> Podcasts </Link>
+        <Link onClick={() => toggleMenu(false)} to='/movies'> Film & TV </Link>
+        <Link onClick={() => toggleMenu(false)} to='/organizations'> Organizations </Link>
+        <Link onClick={() => toggleMenu(false)} to='/parents'> Raising Anti-Racist Kids </Link>
         {
           props.isUserLoggedIn
             ?
