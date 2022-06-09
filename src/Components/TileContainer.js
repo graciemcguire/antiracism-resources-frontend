@@ -1,21 +1,20 @@
-import React, { useState, useEffect } from 'react'
-import Tile from './Tile'
+import React, { useState, useEffect } from 'react';
+import Tile from './Tile';
 
 const TileContainer = (props) => {
-	console.log(props);
 
-  const allTiles = props.currentResources.map( resource => {
-      return <Tile
-              key={resource.id}
-              resource={resource}
-            />
-  })
+  const allTiles = props.currentResources.map(resource => {
+    return <Tile
+      key={resource.id}
+      resource={resource}
+    />;
+  });
 
-  return(
+  return (
     <section className={`tile-container`}>
-      { allTiles }
+      {allTiles}
     </section>
-  )
-}
+  );
+};
 
-export default TileContainer
+export default TileContainer;

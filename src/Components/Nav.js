@@ -1,23 +1,23 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import userActions from '../redux/actions'
-import HamburgerMenu from 'react-hamburger-menu'
-import logo from '../arr_logo_v4.png'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import userActions from '../redux/actions';
+import HamburgerMenu from 'react-hamburger-menu';
+import logo from '../arr_logo_v4.png';
 
 const Nav = (props) => {
 
-  const [ isOpen, toggleMenu ] = useState(false)
+  const [isOpen, toggleMenu] = useState(false);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleLogout = () => {
-    dispatch(userActions.logoutUser())
-  }
+    dispatch(userActions.logoutUser());
+  };
 
 
-  return(
-    
+  return (
+
     <nav>
       <section className='hamburger-menu-container'>
         <HamburgerMenu
@@ -31,31 +31,31 @@ const Nav = (props) => {
           borderRadius={3}
           animationDuration={0.5}
         />
-      <section className='main-title'>
-        <Link to='/'><img src= { logo } alt= 'anti-racism resources' className='logo' /></Link>
+        <section className='main-title'>
+          <Link to='/'><img src={logo} alt='anti-racism resources' className='logo' /></Link>
+        </section>
       </section>
-      </section>
-        <section className={isOpen ? 'menu-list-mobile' : 'menu-list-desktop'}>
-          <Link to='/books'> Books </Link>
-          <Link to='/articles'> Articles </Link>
-          <Link to='/videos'> Videos </Link>
-          <Link to='/podcasts'> Podcasts </Link>
-          <Link to='/movies'> Film & TV </Link>
-          <Link to='/organizations'> Organizations </Link>
-          <Link to='/parents'> Raising Anti-Racist Kids </Link>
-          {
-            props.isUserLoggedIn
+      <section className={isOpen ? 'menu-list-mobile' : 'menu-list-desktop'}>
+        <Link onClick={() => toggleMenu(false)} to='/books'> Books </Link>
+        <Link onClick={() => toggleMenu(false)} to='/articles'> Articles </Link>
+        <Link onClick={() => toggleMenu(false)} to='/videos'> Videos </Link>
+        <Link onClick={() => toggleMenu(false)} to='/podcasts'> Podcasts </Link>
+        <Link onClick={() => toggleMenu(false)} to='/movies'> Film & TV </Link>
+        <Link onClick={() => toggleMenu(false)} to='/organizations'> Organizations </Link>
+        <Link onClick={() => toggleMenu(false)} to='/parents'> Raising Anti-Racist Kids </Link>
+        {
+          props.isUserLoggedIn
             ?
-            <Link to='/' onClick={ handleLogout }> log out </Link>
+            <Link to='/' onClick={handleLogout}> log out </Link>
             :
             <>
               <Link to='/login'> Login </Link>
               <Link to='/signup'> Sign Up </Link>
             </>
-          }
-        </section>
+        }
+      </section>
 
     </nav>
-  )
-}
+  );
+};
 export default Nav;
